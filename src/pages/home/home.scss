@@ -1,3 +1,24 @@
 page-home {
 
 }
+
+.container {
+    position: relative;
+}
+.homeBtn {
+    position: absolute;
+    right: 68%;
+}
+.profileBtn {
+    position: absolute;
+    right: 65%;
+}
+
+.iconContainer {
+    margin-left: 0.5%;
+    position: relative;
+}
+.iconContainer img {
+    width: 30px;
+    height: 30px;
+}

@@ -8,7 +8,7 @@
         <button ion-button icon-only class="homeBtn">
             <ion-icon name="home"></ion-icon>
         </button>
-        <button ion-button icon-only class="profileBtn">
+        <button ion-button icon-only class="profileBtn" (click)="openProfile()">
             <ion-icon name="contacts"></ion-icon>
         </button>
 
@@ -16,5 +16,10 @@
           
       </div>
   </ion-navbar>
-
 </ion-header>
+
+<ion-content>
+    <div class="feed">
+        <twit *ngFor="let twit of twits" [twit]="twit"></twit>
+    </div>
+</ion-content>

@@ -5,7 +5,7 @@ import { ComposeTwitPage } from '../compose-twit/compose-twit';
 import { TwitComponent } from '../../components/twit/twit'
 //import { DataService } from '../../services/data/data.service';
 //import { ConfigService } from '../../services/config/config.service';
-import { TwitsService } from '../../services/twits/twits.service';
+import { TwitsService } from '../../providers/twits/twits.service';
 import { Config } from '../../interfaces/config.interface';
 import 'rxjs/Rx';
 

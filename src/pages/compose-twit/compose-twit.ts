@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 
-import { TwitsService } from '../../services/twits/twits.service';
+import { TwitsService } from '../../providers/twits/twits.service';
 
 @IonicPage()
 @Component({

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
+import { ComposeTwitPage } from '../compose-twit/compose-twit';
 import { TwitComponent } from '../../components/twit/twit'
 //import { DataService } from '../../services/data/data.service';
 //import { ConfigService } from '../../services/config/config.service';
@@ -28,6 +29,10 @@ export class HomePage {
     this.navCtrl.push(ProfilePage);
   }
 
+  openComposeTwit() {
+    this.navCtrl.push(ComposeTwitPage);
+  }
+
   ngOnInit() {
     console.log("App iniciada");
   }
@@ -38,7 +43,7 @@ export class HomePage {
         
         this.twits = twits;
       }
-    )
+    );
   }
 
 }

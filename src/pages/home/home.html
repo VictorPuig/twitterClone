@@ -1,20 +1,14 @@
 <ion-header>
-
   <ion-navbar>
-      <div class="container">
-          
-        <img src="assets/twitIcon.png">
-
-        <button ion-button icon-only class="homeBtn">
-            <ion-icon name="home"></ion-icon>
-        </button>
-        <button ion-button icon-only class="profileBtn" (click)="openProfile()">
-            <ion-icon name="contacts"></ion-icon>
-        </button>
-
-        
-          
-      </div>
+    <div class="container">
+    <img src="assets/twitIcon.png">
+    <button ion-button icon-only class="homeBtn">
+        <ion-icon name="home"></ion-icon>
+    </button>
+    <button ion-button icon-only class="profileBtn" (click)="openProfile()">
+        <ion-icon name="contacts"></ion-icon>
+    </button>
+    </div>
   </ion-navbar>
 </ion-header>
 
@@ -22,10 +16,9 @@
     <div class="feed">
         <twit *ngFor="let twit of twits" [twit]="twit"></twit>
         <ion-fab>
-            <button ion-fab color="primary" class="newTwitBtn">
+            <button ion-fab color="primary" class="newTwitBtn" (click)="openComposeTwit()">
                 <img src="assets/twit.png">
             </button>
         </ion-fab>
     </div>
-    
 </ion-content>

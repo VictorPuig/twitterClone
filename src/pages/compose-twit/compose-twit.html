@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <div class="container">
+      <img src="assets/twitIcon.png">
+      <button ion-button icon-only class="homeBtn">
+          <ion-icon name="home"></ion-icon>
+      </button>
+      <button ion-button icon-only class="profileBtn">
+          <ion-icon name="contacts"></ion-icon>
+      </button>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="user">
+    <div class="imgContainer">
+      
+    </div>
+      <p><b>{{user.name}}</b></p>
+      <p>{{user.acc}}</p>
+    </div>
+
+    <form [formGroup]="twitForm" (ngSubmit)="sendTwit()">
+      <ion-item>
+        <ion-input class="twitInput" type="text" formControlName="description" placeholder="What is happening?"></ion-input>
+      </ion-item>
+      <button ion-button type="submit" [disabled]="!twitForm.valid">Submit</button>
+    </form>
+  </div>
+</ion-content>

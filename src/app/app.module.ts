@@ -12,7 +12,7 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ProfilePage } from '../pages/profile/profile';
-import { TabsPage } from '../pages/tabs/tabs';
+import { ComposeTwitPage } from '../pages/compose-twit/compose-twit';
 import { TwitComponent } from '../components/twit/twit';
 
 @NgModule({
@@ -20,7 +20,7 @@ import { TwitComponent } from '../components/twit/twit';
     MyApp,
     HomePage,
     ProfilePage,
-    TabsPage,
+    ComposeTwitPage,
     TwitComponent
   ],
   imports: [
@@ -32,8 +32,8 @@ import { TwitComponent } from '../components/twit/twit';
   entryComponents: [
     MyApp,
     HomePage,
-    ProfilePage,
-    TabsPage
+    ComposeTwitPage,
+    ProfilePage
   ],
   providers: [
     DataService,

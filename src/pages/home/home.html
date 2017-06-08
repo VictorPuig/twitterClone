@@ -21,5 +21,11 @@
 <ion-content>
     <div class="feed">
         <twit *ngFor="let twit of twits" [twit]="twit"></twit>
+        <ion-fab>
+            <button ion-fab color="primary" class="newTwitBtn">
+                <img src="assets/twit.png">
+            </button>
+        </ion-fab>
     </div>
+    
 </ion-content>

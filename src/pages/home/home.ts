@@ -30,6 +30,8 @@ export class HomePage {
 
   ngOnInit() {
     console.log("App iniciada");
+  }
+  ionViewWillEnter() {
     this.twitsService.getTwits().subscribe(
       twits => {
         console.log(twits);

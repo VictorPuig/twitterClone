@@ -30,18 +30,16 @@
     <nav></nav>
 </ion-header>
 <ion-content>
-    <div class="feed">
-        <ion-row>
-            <ion-col width-50>
-                <twit *ngFor="let twit of twits" [twit]="twit"></twit>
-            </ion-col>
-            <ion-col></ion-col>
-        </ion-row>
-        
-        <ion-fab>
-            <button ion-fab color="primary" class="newTwitBtn" (click)="openComposeTwit()">
-                <img src="assets/twit.png">
-            </button>
-        </ion-fab>
-    </div>
+    <ion-row>
+        <ion-col width-50>
+            <twit *ngFor="let twit of twits" [twit]="twit"></twit>
+        </ion-col>
+        <ion-col></ion-col>
+    </ion-row>
+    
+    <ion-fab>
+        <button ion-fab color="primary" class="newTwitBtn" (click)="openComposeTwit()">
+            <img src="assets/twit.png">
+        </button>
+    </ion-fab>
 </ion-content>

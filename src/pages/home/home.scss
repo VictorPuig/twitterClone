@@ -19,14 +19,14 @@ page-home {
     position: absolute;
 }
 
-.feed {
+ion-content {
     margin: auto;
     padding: 10px;
     height: 100%;
     position: relative;
 }
-.feed ion-fab {
+ion-content ion-fab {
     bottom: 1%;
-    right: 0;
+    right: 2%;
     position: absolute;
 }

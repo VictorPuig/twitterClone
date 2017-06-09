@@ -25,6 +25,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, public twitsService: TwitsService, private auth: AuthService, public dataService: DataService) {
     let info = this.auth.getUser();
     this.user = info;
+    //this.user = new User('Jason', 'mec@gmail.com', 'Jeison', null);
     this.user.username = '@' + this.user.username; //afegir aqui el @ per tenir-ho en tot moment
     this.dataService.setUser(this.user);
   }

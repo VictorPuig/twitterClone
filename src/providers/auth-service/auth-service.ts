@@ -4,21 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 import { UserService } from '../user-service/user-service'
-
- 
-export class User {
-  name: string;
-  email: string;
-  username: string;
-  img: string;
- 
-  constructor(name: string, email: string, username: string, img: string) {
-    this.name = name;
-    this.email = email;
-    this.username = username;
-    this.img = img;
-  }
-}
+import { User } from '../../clases/user.class';
 
 @Injectable()
 export class AuthService {
@@ -68,7 +54,7 @@ export class AuthService {
     }
   }
  
-  public getUserInfo() : User {
+  public getUser() : User {
     return this.currentUser;
   }
  

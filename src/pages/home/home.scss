@@ -5,11 +5,9 @@ page-home {
 .container {
     position: relative;
 }
-.homeBtn {
+.container button {
+    color: #488aff
 }
-.profileBtn {
-}
-
 .iconContainer {
     margin-left: 0.5%;
     position: relative;
@@ -27,21 +25,8 @@ page-home {
     height: 100%;
     position: relative;
 }
-
-.feed twit {
-    margin: 0 auto;
-    left: 35%;
-    position: relative;
-}
-
 .feed ion-fab {
     bottom: 1%;
     right: 0;
     position: absolute;
-}
-
-.feed button img {
-}
-.newTwitBtn {
-    
 }

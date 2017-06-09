@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { ComposeTwitPage } from '../compose-twit/compose-twit';
-import { TwitComponent } from '../../components/twit/twit'
-//import { DataService } from '../../services/data/data.service';
-//import { ConfigService } from '../../services/config/config.service';
+import { LoginPage } from '../login/login';
+import { TwitComponent } from '../../components/twit/twit';
+import { DataService } from '../../providers/data/data.service';
+//import { ConfigService } from '../../providers/config/config.service';
 import { TwitsService } from '../../providers/twits/twits.service';
-import { Config } from '../../interfaces/config.interface';
+import { AuthService } from '../../providers/auth-service/auth-service';
+import { User } from '../../clases/user.class';
+//import { Config } from '../../interfaces/config.interface';
 import 'rxjs/Rx';
 
 @Component({
@@ -14,19 +17,16 @@ import 'rxjs/Rx';
   templateUrl: 'home.html'
 })
 export class HomePage {
- 
-  profilePage:any = ProfilePage;
 
-  //config: Config;
 
   twits: any[];
+  user: User;
   
-  constructor(public navCtrl: NavController, public twitsService: TwitsService) {
-
-  }
-
-  openProfile() {
-    this.navCtrl.push(ProfilePage);
+  constructor(public navCtrl: NavController, public twitsService: TwitsService, private auth: AuthService, public dataService: DataService) {
+    let info = this.auth.getUser();
+    this.user = info;
+    this.user.username = '@' + this.user.username; //afegir aqui el @ per tenir-ho en tot moment
+    this.dataService.setUser(this.user);
   }
 
   openComposeTwit() {
@@ -45,5 +45,4 @@ export class HomePage {
       }
     );
   }
-
 }

@@ -1,4 +1,4 @@
-<ion-header>
+<!--<ion-header>
   <ion-navbar>
     <div class="container">
       <img src="assets/twitIcon.png">
@@ -10,6 +10,10 @@
       </button>
     </div>
   </ion-navbar>
+</ion-header>-->
+
+<ion-header>
+    <nav></nav>
 </ion-header>
 
 <ion-content>
@@ -19,7 +23,7 @@
       
     </div>
       <p><b>{{user.name}}</b></p>
-      <p>{{user.acc}}</p>
+      <p>{{user.username}}</p>
     </div>
 
     <form [formGroup]="twitForm" (ngSubmit)="sendTwit()">

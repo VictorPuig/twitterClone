@@ -1,16 +1,26 @@
 import { Injectable } from '@angular/core';
 import { Config } from '../../interfaces/config.interface';
+import { User } from '../../clases/user.class'
 @Injectable()
 export class DataService {
-  private data: Config;
+  private config: Config;
+  private user: User;
 
   constructor() { }
 
-    setData(val) {
-        this.data = val;
+    setConfig(val) {
+        this.config = val;
     }
 
-    getValue() {
-        return this.data;
+    getConfig() {
+        return this.config;
+    }
+
+    setUser(user) {
+        this.user = user;
+    }
+
+    getUser() {
+        return this.user;
     }
 }

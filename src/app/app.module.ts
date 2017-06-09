@@ -18,6 +18,7 @@ import { ComposeTwitPage } from '../pages/compose-twit/compose-twit';
 import { TwitComponent } from '../components/twit/twit';
 import { AuthService } from '../providers/auth-service/auth-service';
 import { UserService } from '../providers/user-service/user-service';
+import { NavComponent } from '../components/nav/nav';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { UserService } from '../providers/user-service/user-service';
     ComposeTwitPage,
     LoginPage,
     RegisterPage,
-    TwitComponent
+    TwitComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

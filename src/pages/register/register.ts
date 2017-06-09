@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { AuthService } from '../../providers/auth-service/auth-service';
 
 
-@IonicPage()
 @Component({
   selector: 'page-register',
   templateUrl: 'register.html',

@@ -9,7 +9,7 @@ export class UserService {
 
   constructor(public http: Http) {
     console.log('Hello UserServiceProvider Provider');
-    this.url = 'http://192.168.1.128:8082';
+    this.url = 'http://192.168.18.23:8082';
   }
 
   getUserByEmail(email: string) {

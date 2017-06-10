@@ -9,7 +9,7 @@ export class TwitsService {
 
   url: string;
   constructor(private _http: Http) {
-    this.url = 'http://192.168.1.128:8082/twits';
+    this.url = 'http://192.168.18.23:8082/twits';
    }
 
   getTwits() {

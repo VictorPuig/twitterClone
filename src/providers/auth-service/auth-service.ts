@@ -22,8 +22,9 @@ export class AuthService {
         // At this point make a request to your backend to make a real check!
         this.userService.getUserByEmail(credentials.email).subscribe( 
           user => {
-            let access = (credentials.password === user.password && credentials.email === user.email);
-            this.currentUser = new User(user.name, user.email, user.username, user.img);
+            let access = (user !== null && credentials.password === user.password && credentials.email === user.email);
+            if(user !== null)
+              this.currentUser = new User(user.name, user.email, user.username, user.img);
             observer.next(access);
             observer.complete();
           }

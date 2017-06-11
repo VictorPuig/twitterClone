@@ -1,5 +1,5 @@
 import { NavController } from 'ionic-angular';
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { LoginPage } from '../../pages/login/login';
 import { ProfilePage } from '../../pages/profile/profile';
 import { HomePage } from '../../pages/home/home';
@@ -13,9 +13,12 @@ import { AuthService } from '../../providers/auth-service/auth-service';
 export class NavComponent {
 
   text: string;
+  toggle: boolean
+  @Output() leftPosition = new EventEmitter();
 
   constructor(private auth: AuthService, public navCtrl: NavController) {
     console.log('Hello NavComponent Component');
+    this.toggle = true;
   }
 
   public logout() {
@@ -30,6 +33,11 @@ export class NavComponent {
 
   openComposeTwit() {
     this.navCtrl.push(ComposeTwitPage);
+  }
+
+  togglePosition () {
+    this.toggle = !this.toggle;
+    this.leftPosition.emit(this.toggle);
   }
 
 }

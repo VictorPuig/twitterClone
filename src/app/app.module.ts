@@ -36,7 +36,7 @@ import { NavComponent } from '../components/nav/nav';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp, {tabsPlacement: 'bottom'})
+    IonicModule.forRoot(MyApp, {tabsPlacement: 'top'})
   ],
   bootstrap: [IonicApp],
   entryComponents: [

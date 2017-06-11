@@ -1,5 +1,5 @@
 import { NavController } from 'ionic-angular';
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, Input, EventEmitter } from '@angular/core';
 import { LoginPage } from '../../pages/login/login';
 import { ProfilePage } from '../../pages/profile/profile';
 import { HomePage } from '../../pages/home/home';
@@ -12,6 +12,7 @@ import { AuthService } from '../../providers/auth-service/auth-service';
 })
 export class NavComponent {
 
+  @Input() title: string;
   text: string;
   toggle: boolean
   @Output() leftPosition = new EventEmitter();

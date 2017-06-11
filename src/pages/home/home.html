@@ -27,7 +27,7 @@
   </ion-navbar>
 </ion-header>-->
 <ion-header>
-    <nav (leftPosition)="togglePosition($event)"></nav>
+    <nav (leftPosition)="togglePosition($event)" [title]="title"></nav>
 </ion-header>
 <ion-content [ngClass]="getStyleClasses()">
     <ion-row>

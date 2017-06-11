@@ -22,8 +22,10 @@ export class HomePage {
   styleClasses: any;
   twits: any[];
   user: User;
+  title: string;
   
   constructor(public navCtrl: NavController, public twitsService: TwitsService, private auth: AuthService, public dataService: DataService) {
+    this.title = "Home";
     let info = this.auth.getUser();
     this.leftPosition = true;
     //this.user = info;

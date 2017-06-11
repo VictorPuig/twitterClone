@@ -23,6 +23,9 @@ export class HomePage {
   twits: any[];
   user: User;
   title: string;
+
+  homePage:any = HomePage;
+  profilePage:any = ProfilePage;
   
   constructor(public navCtrl: NavController, public twitsService: TwitsService, private auth: AuthService, public dataService: DataService) {
     this.title = "Home";

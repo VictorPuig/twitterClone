@@ -10,6 +10,7 @@ import { TwitsService } from '../providers/twits/twits.service';
 
 import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
+import { TabsPage } from '../pages/tabs/tabs';
 import { HomePage } from '../pages/home/home';
 import { ProfilePage } from '../pages/profile/profile';
 import { LoginPage } from '../pages/login/login';
@@ -28,17 +29,19 @@ import { NavComponent } from '../components/nav/nav';
     ComposeTwitPage,
     LoginPage,
     RegisterPage,
+    TabsPage,
     TwitComponent,
     NavComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {tabsPlacement: 'bottom'})
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    TabsPage,
     HomePage,
     LoginPage,
     RegisterPage,

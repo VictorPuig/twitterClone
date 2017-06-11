@@ -13,7 +13,6 @@ import { User } from '../../clases/user.class';
 })
 export class ComposeTwitPage {
   private twitForm : FormGroup;
-
   user: User; //canviar per usuari registrat
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder, public twitsService: TwitsService, public dataService: DataService) {
@@ -24,6 +23,10 @@ export class ComposeTwitPage {
 
   ngOnInit() {
     this.user = this.dataService.getUser();
+  }
+
+  validDescription() {
+    return this.twitForm.value.description !== '';
   }
 
   sendTwit() {

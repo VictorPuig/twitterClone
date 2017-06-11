@@ -30,7 +30,7 @@
       <ion-item>
         <ion-input class="twitInput" type="text" formControlName="description" placeholder="What is happening?"></ion-input>
       </ion-item>
-      <button ion-button type="submit" [disabled]="!twitForm.valid">Submit</button>
+      <button ion-button type="submit" [disabled]="!twitForm.valid || !validDescription()">Submit</button>
     </form>
   </div>
 </ion-content>

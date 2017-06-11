@@ -27,14 +27,13 @@
   </ion-navbar>
 </ion-header>-->
 <ion-header>
-    <nav></nav>
+    <nav (leftPosition)="togglePosition($event)"></nav>
 </ion-header>
-<ion-content>
+<ion-content [ngClass]="getStyleClasses()">
     <ion-row>
-        <ion-col width-50>
+        <ion-col>
             <twit *ngFor="let twit of twits" [twit]="twit"></twit>
         </ion-col>
-        <ion-col></ion-col>
     </ion-row>
     
     <ion-fab>

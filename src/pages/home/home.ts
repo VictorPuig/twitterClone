@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { ComposeTwitPage } from '../compose-twit/compose-twit';
@@ -18,14 +18,16 @@ import 'rxjs/Rx';
 })
 export class HomePage {
 
-
+  @Input() leftPosition: boolean;
+  styleClasses: any;
   twits: any[];
   user: User;
   
   constructor(public navCtrl: NavController, public twitsService: TwitsService, private auth: AuthService, public dataService: DataService) {
     let info = this.auth.getUser();
-    this.user = info;
-    //this.user = new User('Jason', 'mec@gmail.com', 'Jeison', null);
+    this.leftPosition = true;
+    //this.user = info;
+    this.user = new User('Jason', 'mec@gmail.com', 'Jeison', null);
     this.user.username = '@' + this.user.username; //afegir aqui el @ per tenir-ho en tot moment
     this.dataService.setUser(this.user);
   }
@@ -37,6 +39,19 @@ export class HomePage {
   ngOnInit() {
     console.log("App iniciada");
   }
+
+  getStyleClasses() {
+    this.styleClasses = {
+      'Spanish': this.leftPosition,
+      'Arabian': !this.leftPosition
+    }
+    return this.styleClasses;
+  }
+
+  togglePosition (event) {
+    this.leftPosition = event;
+  }
+
   ionViewWillEnter() {
     this.twitsService.getTwits().subscribe(
       twits => {

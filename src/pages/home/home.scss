@@ -15,5 +15,22 @@ ion-content {
 ion-content ion-fab {
     bottom: 1%;
     right: 7%;
-    position: absolute;
+}
+
+ion-content ion-row {
+    
+}
+
+.Spanish {
+    
+}
+
+.Arabian {
+    ion-row {
+        float: right;
+    }
+    ion-fab {
+        left: 2%;
+    }
+    
 }

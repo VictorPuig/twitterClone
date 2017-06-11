@@ -28,10 +28,25 @@
 </ion-header>-->
 
 <ion-header>
-    <nav [title]="user.name"></nav>
+    <nav (leftPosition)="togglePosition($event)"[title]="title"></nav>
 </ion-header>
 
 
-<ion-content>
-  ToDo edit profile
+<ion-content [ngClass]="getStyleClasses()">
+  <ion-row>
+    <div class="background">
+        <img src="assets/dawn.jpg">
+    </div>
+    <div class="profileImgContainer">
+        <img class="profilePhoto" src="assets/profile.jpg">
+    </div>
+    <ion-col>
+        <div class="profile">
+            <p><b>{{user.name}}</b></p>
+            <p>{{user.username}}</p>
+        </div>
+    </ion-col>
+    <ion-col></ion-col>
+    <ion-col></ion-col>
+  </ion-row>
 </ion-content>

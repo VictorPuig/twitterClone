@@ -1,0 +1,36 @@
+
+
+.Spanish {
+    
+}
+
+.Arabian {
+    float: right;
+}
+
+.profilePhoto {
+    width: 70px;
+    height: 70px;
+}
+
+.background {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+
+.profileImgContainer {
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    border: 3px solid white;
+}
+
+ion-row ion-col:first-child div {
+    margin-left: 1%;
+}
+
+.profile {
+    padding-top: 25%;
+}

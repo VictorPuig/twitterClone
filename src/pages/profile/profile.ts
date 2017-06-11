@@ -28,8 +28,6 @@ export class ProfilePage {
   }
 
   togglePosition (event) {
-    console.log("ADWAWD")
-
     this.leftPosition = event;
   }
 }

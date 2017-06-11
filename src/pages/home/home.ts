@@ -31,8 +31,8 @@ export class HomePage {
     this.title = "Home";
     let info = this.auth.getUser();
     this.leftPosition = true;
-    //this.user = info;
-    this.user = new User('Jason', 'mec@gmail.com', 'Jeison', null);
+    this.user = info;
+    //this.user = new User('Jason', 'mec@gmail.com', 'Jason', null);
     this.user.username = '@' + this.user.username; //afegir aqui el @ per tenir-ho en tot moment
     this.dataService.setUser(this.user);
   }
